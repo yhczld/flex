@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box {
+				/*左对齐只有display：flex；*/
+				display: flex;
+				/*中间对其*/
+				/*justify-content: center;*/
+				/*右对齐*/
+				/*justify-content: flex-end;*/
+				/*左中间对其*/
+				/*align-items: center;*/
+				/*正中间对其*/
+				/*justify-content: center;
+				align-items: center;*/
+				/*靠下中间对其*/
+				/*justify-content: center;
+				align-items: flex-end;*/
+				/*右下角对其*/
+				/*justify-content: flex-end;
+				align-items: flex-end;*/
+				/*双项目*/
+				/*上居中对其左右间距相等边框为间距1/2*/
+				/*justify-content: space-around;*/
+				/*上居中对齐距边框无间距*/
+				/*justify-content: space-between;*/
+				/*竖排列 居中对其 边框有距离*/
+				/*flex-direction: column;
+				justify-content: space-around;*/
+				/*竖型排列居中对齐*/
+				/*flex-direction: column;
+				justify-content: space-between;
+				align-items: center;*/
+				width: 50px;
+				height: 50px;
+				padding: 2px;
+				border-radius: 4px;
+				background-color: #fff;
+				border: 5px solid #eee;
+			}
+			
+			.item {
+				width: 10px;
+				height: 10px;
+				background-color: #000;
+				border-radius: 50%;
+			}
+			
+			.first-face {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.second-face {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.second-face .pip:nth-of-type(2) {
+				align-self: flex-end;
+			}
+			
+			.third-face {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.third-face .pip:nth-of-type(2) {
+				align-self: center;
+			}
+			
+			.third-face .pip:nth-of-type(3) {
+				align-self: flex-end;
+			}
+			
+			.fourth-face,
+			.sixth-face {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.fourth-face .column,
+			.sixth-face .column {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.fifth-face {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.fifth-face .column {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.fifth-face .column:nth-of-type(2) {
+				justify-content: center;
+			}
+			/* OTHER STYLES */
+			
+			* {
+				box-sizing: border-box;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				vertical-align: center;
+				flex-wrap: wrap;
+				align-content: center;
+				font-family: 'Open Sans', sans-serif;
+				background: linear-gradient(top, #222, #333);
+			}
+			
+			[class$="face"] {
+				margin: 16px;
+				padding: 4px;
+				background-color: #e7e7e7;
+				width: 104px;
+				height: 104px;
+				object-fit: contain;
+				box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
+				border-radius: 10%;
+			}
+			
+			.pip {
+				display: block;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				margin: 4px;
+				background-color: #333;
+				box-shadow: inset 0 3px #111, inset 0 -3px #555;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<span class="item"></span>
+			<span class="item"></span>
+			<span class="item"></span>
+		</div>
+		<div class="first-face">
+			<span class="pip"></span>
+		</div>
+		<div class="second-face">
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div class="third-face">
+			<span class="pip"></span>
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div class="fourth-face">
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+		<div class="fifth-face">
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="column">
+				<span class="pip"></span>
+			</div>
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+		<div class="sixth-face">
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+	</body>
+
+</html>
